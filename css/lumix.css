@@ -1,0 +1,2069 @@
+@charset "UTF-8";
+article#menu div.bnr > ul.bnav, div#review, div#review div.column div.frame, div#modal_movie div.movie_special div.btn, div.gallery_page div#thumb ul, div.modal_gallery, #sp div.focus_contents div.btn, div#modal_about div.box_focus, div#modal_about div.box_rapid {
+  zoom: 1;
+}
+article#menu div.bnr > ul.bnav:after, div#review:after, div#review div.column div.frame:after, div#modal_movie div.movie_special div.btn:after, div.gallery_page div#thumb ul:after, div.modal_gallery:after, #sp div.focus_contents div.btn:after, div#modal_about div.box_focus:after, div#modal_about div.box_rapid:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+div.bgm_control, article.movie div#ticker > div, article#menu div.bnr, div#review, div#modal_movie, div.gallery_page div#main {
+  width: 976px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+#sp div.bgm_control, #sp article.movie div#ticker > div, article.movie #sp div#ticker > div, #sp article#menu div.bnr, article#menu #sp div.bnr, #sp div#review, #sp div#modal_movie, #sp div.gallery_page div#main, div.gallery_page #sp div#main {
+  width: 100%;
+}
+
+/** common
+/**************************************/
+div#contents {
+  opacity: 0;
+}
+
+article {
+  width: 1200px;
+  margin-left: -112px;
+}
+#sp article {
+  width: 100%;
+  margin-left: 0;
+}
+
+.disp_pc {
+  display: block !important;
+}
+#sp .disp_pc {
+  display: none !important;
+}
+
+.disp_sp {
+  display: none !important;
+}
+#sp .disp_sp {
+  display: block !important;
+}
+
+/** bgm
+/**************************************/
+div.bgm_control {
+  z-index: 7;
+  width: 270px;
+  text-align: right;
+  position: absolute;
+  top: 22px;
+  right: 115px;
+}
+#sp div.bgm_control {
+  display: none;
+}
+div.bgm_control p {
+  color: #fff;
+  font-size: 11px;
+  font-family: Reimin Y10 Regular, "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+div.bgm_control p a {
+  color: #fff;
+}
+div.bgm_control p a.active {
+  color: #636363;
+}
+
+/** movie
+/**************************************/
+article.movie {
+  position: relative;
+  background-repeat: no-repeat;
+}
+article.movie#v1 div.btn_play {
+  position: absolute;
+  top: 160px;
+  left: 782px;
+}
+article.movie#v2 div.btn_play {
+  position: absolute;
+  top: 154px;
+  left: 230px;
+}
+#pc article.movie div.bnr_yb {
+  border: 1px solid #fff;
+  position: absolute;
+  left: 831px;
+  top: 92px;
+  z-index: 5;
+}
+article.movie div.btn_play {
+  margin-left: -43px;
+  z-index: 5;
+}
+#sp article.movie div.btn_play {
+  display: none;
+}
+article.movie div.btn_play > div {
+  width: 46px;
+  height: 46px;
+  overflow: hidden;
+  position: relative;
+}
+article.movie div.btn_play > div img {
+  opacity: 0;
+  -webkit-transition: 0.4s ease-in-out;
+  -moz-transition: 0.4s ease-in-out;
+  -o-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+article.movie div.btn_play > div img.on {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+article.movie div.btn_play > div img.active {
+  opacity: 1;
+}
+#pc article.movie#v1 {
+  height: 320px;
+  position: relative;
+}
+#pc article.movie#v1 a {
+  height: 247px;
+}
+#pc article.movie#v1 div.bg {
+  background-image: url("../img/top/movie01.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+#pc article.movie#v1 div.label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+#pc article.movie#v1 div.label img {
+  display: block;
+}
+#sp article.movie#v1 div.label {
+  margin-top: -40px;
+}
+#pc article.movie#v2 {
+  height: 295px;
+}
+#pc article.movie#v2 a {
+  height: 247px;
+}
+#pc article.movie#v2 div.bg {
+  background-image: url("../img/top/movie02.jpg");
+}
+article.movie div.bg {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 0.4s ease-in-out;
+  -moz-transition: 0.4s ease-in-out;
+  -o-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+article.movie div.bg.on {
+  opacity: 0.8;
+}
+article.movie div.sp {
+  display: none;
+}
+#sp article.movie div.sp {
+  display: block;
+}
+#sp article.movie div.sp img {
+  display: block;
+}
+article.movie > a {
+  display: block;
+  width: 100%;
+  z-index: 6;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#sp article.movie > a {
+  height: 100%;
+}
+article.movie div#ticker {
+  width: 100%;
+  z-index: 2;
+  background: #000;
+}
+#pc article.movie div#ticker {
+  background: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+article.movie div#ticker > div {
+  position: relative;
+  padding: 15px 0 30px;
+}
+#sp article.movie div#ticker > div {
+  padding: 20px 15px 30px;
+}
+article.movie div#ticker > div ul {
+  position: relative;
+  left: 0;
+}
+article.movie div#ticker > div ul li {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  white-space: nowrap;
+  opacity: 0;
+  display: none;
+}
+article.movie div#ticker > div ul li p {
+  color: #c7b655;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: 'メイリオ', Meiryo, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'ＭＳ Ｐゴシック', sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -webkit-transition: 0.4s ease-in-out;
+  -moz-transition: 0.4s ease-in-out;
+  -o-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+#sp article.movie div#ticker > div ul li p {
+  font-size: 11px;
+}
+article.movie#v1 div.date {
+  position: absolute;
+  top: 97px;
+  right: 481px;
+}
+article.movie#v2 div.date {
+  position: absolute;
+  top: 76px;
+  left: 129px;
+}
+article.movie div.date {
+  z-index: 5;
+}
+article.movie div.date > div {
+  position: relative;
+}
+article.movie div.date > div p {
+  z-index: 2;
+  overflow: hidden;
+  width: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/** menu
+/**************************************/
+article#menu {
+  padding: 60px 0;
+  background: url("../img/top/menu_bg.jpg") no-repeat top center;
+  background-size: cover;
+}
+#sp article#menu {
+  padding: 20px 0;
+  background-position: 0 50%;
+  background-size: auto 100%;
+}
+article#menu div.bnr {
+  position: relative;
+}
+#sp article#menu div.bnr > * {
+  width: 90.63%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+article#menu div.bnr > div {
+  margin-bottom: 24px;
+  position: relative;
+}
+article#menu div.bnr > div img {
+  -webkit-transition: 0.1s ease-out;
+  -moz-transition: 0.1s ease-out;
+  -o-transition: 0.1s ease-out;
+  transition: 0.1s ease-out;
+}
+article#menu div.bnr > div:hover img {
+  opacity: 0.6;
+}
+#pc article#menu div.bnr div.gallery > div {
+  position: absolute;
+  top: 18px;
+  left: 15px;
+}
+article#menu div.bnr div.gallery div {
+  position: relative;
+}
+article#menu div.bnr div.gallery div p {
+  z-index: 2;
+  overflow: hidden;
+  width: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+article#menu div.bnr > ul.bnav {
+  margin-top: 30px;
+}
+#sp article#menu div.bnr > ul.bnav {
+  margin-top: 15px;
+}
+article#menu div.bnr > ul.bnav li {
+  float: left;
+  width: 233px;
+  height: 76px;
+  border: 1px solid #505050;
+  text-align: center;
+  margin-right: 12px;
+  position: relative;
+  -webkit-transition: 0.4s ease-in-out;
+  -moz-transition: 0.4s ease-in-out;
+  -o-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+article#menu div.bnr > ul.bnav li a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+#sp article#menu div.bnr > ul.bnav li {
+  width: 48.28%;
+  height: 50px;
+  margin: 0 0 15px;
+}
+#sp article#menu div.bnr > ul.bnav li:nth-of-type(odd) {
+  float: left;
+}
+#sp article#menu div.bnr > ul.bnav li:nth-of-type(even) {
+  float: right;
+}
+article#menu div.bnr > ul.bnav li:last-child {
+  margin-right: 0;
+}
+article#menu div.bnr > ul.bnav li div {
+  position: relative;
+  vertical-align: middle;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+article#menu div.bnr > ul.bnav li div > * {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: inline-block;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+article#menu div.bnr > ul.bnav li div p {
+  color: #fff;
+  font-size: 14px;
+  width: 100%;
+  line-height: 1.6;
+  font-family: Reimin Y10 Regular, "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+#sp article#menu div.bnr > ul.bnav li div p {
+  font-size: 11px;
+  text-align: left;
+  padding-left: 20px;
+}
+@media screen and (max-width: 320px) {
+  #sp article#menu div.bnr > ul.bnav li div p {
+    font-size: 10px;
+    padding-left: 10px;
+  }
+}
+article#menu div.bnr > ul.bnav li.link i:after {
+  position: absolute;
+  left: 90%;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  margin-top: -4px;
+  content: "";
+  vertical-align: middle;
+}
+#sp article#menu div.bnr > ul.bnav li.link i:after {
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  width: 4.5px;
+  height: 4.5px;
+}
+@media screen and (max-width: 320px) {
+  #sp article#menu div.bnr > ul.bnav li.link i:after {
+    width: 3px;
+    height: 3px;
+  }
+}
+article#menu div.bnr > ul.bnav li.modal {
+  background-image: url("../img/top/bnav_arrow.png");
+  background-repeat: no-repeat;
+  background-position: 95% center;
+  background-size: 28px auto;
+}
+#sp article#menu div.bnr > ul.bnav li.modal {
+  background-size: 17px auto;
+}
+#pc article#menu div.bnr > ul.bnav li.modal p {
+  margin-left: -15px;
+}
+
+/** review
+/**************************************/
+div#review {
+  color: #fff;
+  position: relative;
+  padding: 60px 0;
+  font-family: Reimin Y10 Regular, "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+#sp div#review {
+  width: 90.625%;
+  padding: 30px 0;
+}
+div#review h2 {
+  font-weight: normal;
+  font-size: 31px;
+  margin-bottom: 50px;
+}
+#sp div#review h2 {
+  font-size: 25px;
+  line-height: 1.4;
+  margin-bottom: 30px;
+}
+div#review h2 span {
+  font-size: 20px;
+}
+div#review h2 br {
+  display: none;
+}
+#sp div#review h2 br {
+  display: block;
+}
+div#review div.column {
+  margin-bottom: 30px;
+}
+div#review div.column h3 {
+  font-size: 16px;
+  margin-bottom: 30px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #4d4d4d;
+}
+#sp div#review div.column h3 {
+  margin-bottom: 0;
+}
+div#review div.column div.frame div.yb {
+  float: left;
+}
+#sp div#review div.column div.frame div.yb {
+  float: none;
+}
+div#review div.column div.frame div.tx {
+  float: right;
+  width: 470px;
+}
+#sp div#review div.column div.frame div.tx {
+  float: none;
+  width: 100%;
+}
+div#review div.column div.frame div.tx h4 {
+  font-size: 21px;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+#sp div#review div.column div.frame div.tx h4 {
+  font-size: 17px;
+  line-height: 1.4;
+}
+div#review div.column div.frame div.tx p {
+  font-size: 13px;
+  line-height: 1.8;
+}
+#sp div#review div.column div.frame div.tx p {
+  font-size: 13px;
+}
+div#review div.column div.frame div.tx p.q {
+  color: #989898;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 40px;
+}
+#sp div#review div.column div.frame div.tx p.q {
+  padding-left: 0;
+}
+div#review div.column div.frame div.tx p.q::before {
+  content: "";
+  width: 33px;
+  height: 1px;
+  background: #989898;
+  position: absolute;
+  top: 12px;
+  left: 0;
+}
+#sp div#review div.column div.frame div.tx p.q::before {
+  background: none;
+}
+div#review div.column div.frame div.tx p.a {
+  margin-bottom: 20px;
+}
+div#review div.profile {
+  border-top: 1px solid #4d4d4d;
+  padding-top: 60px;
+  position: relative;
+}
+div#review div.profile::before {
+  content: "";
+  background: #4d4d4d;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: -4px;
+  left: 0;
+}
+div#review div.profile div.pic {
+  float: left;
+}
+#sp div#review div.profile div.pic {
+  float: none;
+  margin-bottom: 25px;
+}
+div#review div.profile div.info {
+  float: right;
+  width: 730px;
+}
+#sp div#review div.profile div.info {
+  float: none;
+  width: 100%;
+}
+div#review div.profile div.info h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+#sp div#review div.profile div.info h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+div#review div.profile div.info h2 span {
+  font-size: 8px;
+  padding-left: 15px;
+}
+#sp div#review div.profile div.info h2 span {
+  font-size: 11px;
+}
+div#review div.profile div.info p {
+  font-size: 13px;
+  margin-bottom: 25px;
+  line-height: 1.8;
+}
+#sp div#review div.profile div.info p {
+  font-size: 13px;
+  line-height: 1.8;
+}
+div#review div.profile div.info ul li {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+div#review div.profile div.info ul li a {
+  color: #838383;
+  text-decoration: underline;
+  line-height: 1.6;
+}
+@media screen and (max-width: 320px) {
+  div#review div.profile div.info ul li a {
+    display: inline-block;
+  }
+}
+
+/** modal
+/**************************************/
+button.mfp-close {
+  overflow: visible;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  display: block;
+  outline: none;
+  padding: 0;
+  z-index: 1046;
+  box-shadow: none;
+  width: 38px;
+  height: 38px;
+  background: url("../img/common/btn_close.png") no-repeat left top;
+  text-indent: -9999px;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-appearance: none;
+  touch-action: manipulation;
+  position: absolute;
+  right: 0;
+  -webkit-transition: 0.4s ease-in-out;
+  -moz-transition: 0.4s ease-in-out;
+  -o-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+button.mfp-close:hover {
+  opacity: 0.3;
+}
+div#review button.mfp-close {
+  top: 60px;
+}
+div#modal_movie button.mfp-close {
+  top: -50px;
+}
+div.modal_gallery button.mfp-close {
+  top: 0;
+}
+div#modal_about button.mfp-close {
+  top: 20px;
+  right: 20px;
+}
+div.mfp-iframe-scaler button.mfp-close {
+  top: -50px;
+}
+
+#sp button.mfp-close {
+  width: 24px;
+  height: 24px;
+  background-size: 24px auto;
+  top: 20px !important;
+  right: 0;
+}
+
+#sp div.mfp-iframe-scaler button.mfp-close {
+  top: -30px !important;
+}
+
+/** modal movie
+/**************************************/
+.lock {
+  overflow: hidden;
+}
+
+.modal-overlay {
+  z-index: 1001;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background-color: black;
+}
+
+.modal_wrap {
+  z-index: 1002;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+div#modal_movie {
+  position: relative;
+  display: none;
+}
+@media screen and (max-width: 976px) {
+  div#modal_movie div#movie_yb {
+    width: 100%;
+  }
+  div#modal_movie div#movie_yb iframe {
+    width: 100%;
+  }
+}
+#sp div#modal_movie div#movie_yb {
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  padding-top: 56.25%;
+  background-size: 100% auto;
+}
+#sp div#modal_movie div#movie_yb.focus {
+  background-image: url("../img/top/movie_thumb_focus-sp.jpg");
+}
+#sp div#modal_movie div#movie_yb.rapid {
+  background-image: url("../img/top/movie_thumb_rapid-sp.jpg");
+}
+#sp div#modal_movie div#movie_yb.focus_sp {
+  background-image: url("../img/top/movie_thumb_focussp-sp.jpg");
+}
+#sp div#modal_movie div#movie_yb.rapid_sp {
+  background-image: url("../img/top/movie_thumb_rapidsp-sp.jpg");
+}
+#sp div#modal_movie div#movie_yb iframe {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+div#modal_movie div.movie_special {
+  display: none;
+  padding-bottom: 30px;
+  width: 710px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+#sp div#modal_movie div.movie_special {
+  width: 83.75%;
+}
+div#modal_movie div.movie_special img {
+  border: none;
+  max-width: 100%;
+  height: auto;
+}
+div#modal_movie div.movie_special h2 {
+  margin-bottom: 20px;
+}
+div#modal_movie div.movie_special div.thumb {
+  position: relative;
+}
+div#modal_movie div.movie_special div.thumb div.btn_special a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#sp div#modal_movie div.movie_special div.thumb div.btn_special a {
+  display: none;
+}
+div#modal_movie div.movie_special div.thumb div.replay {
+  z-index: 2;
+  background: #fff;
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+}
+#sp div#modal_movie div.movie_special div.thumb div.replay {
+  position: static;
+  background: none;
+  margin-top: 30px;
+}
+div#modal_movie div.movie_special div.thumb div.replay img {
+  display: block;
+  -webkit-transition: 0.4s ease-in-out;
+  -moz-transition: 0.4s ease-in-out;
+  -o-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+div#modal_movie div.movie_special div.thumb div.replay:hover img {
+  opacity: 0.6;
+}
+div#modal_movie div.movie_special div.thumb div.arrow {
+  margin-top: -43px;
+  margin-left: -43px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+#sp div#modal_movie div.movie_special div.thumb div.arrow {
+  display: none;
+}
+div#modal_movie div.movie_special div.thumb div.arrow > div {
+  position: relative;
+  overflow: hidden;
+  width: 86px;
+  height: 86px;
+}
+div#modal_movie div.movie_special div.thumb div.arrow > div img {
+  opacity: 0;
+  -webkit-transition: 0.4s ease-in-out;
+  -moz-transition: 0.4s ease-in-out;
+  -o-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+div#modal_movie div.movie_special div.thumb div.arrow > div img.on {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+div#modal_movie div.movie_special div.thumb div.arrow > div img.active {
+  opacity: 1;
+}
+div#modal_movie div.movie_special p.tx {
+  font-size: 15px;
+  margin-top: 20px;
+  color: #fff;
+  line-height: 1.8;
+  font-family: Reimin Y10 Regular, "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+#sp div#modal_movie div.movie_special p.tx {
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+#sp div#modal_movie div.movie_special p.tx br {
+  display: none;
+}
+div#modal_movie div.movie_special div.btn {
+  margin-top: 20px;
+  padding-top: 30px;
+  border-top: 1px solid #333333;
+  position: relative;
+}
+#sp div#modal_movie div.movie_special div.btn {
+  padding-top: 0;
+  margin-top: 20px;
+}
+div#modal_movie div.movie_special div.btn::before {
+  content: "";
+  width: 1px;
+  height: 67px;
+  background: #333;
+  margin-left: 15px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+}
+#sp div#modal_movie div.movie_special div.btn::before {
+  display: none;
+}
+div#modal_movie div.movie_special div.btn > div img {
+  -webkit-transition: 0.4s ease-in-out;
+  -moz-transition: 0.4s ease-in-out;
+  -o-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+div#modal_movie div.movie_special div.btn > div img:hover {
+  opacity: 0.5;
+}
+#sp div#modal_movie div.movie_special div.btn > div {
+  float: none;
+}
+div#modal_movie div.movie_special div.btn div.btn_another {
+  float: left;
+}
+#sp div#modal_movie div.movie_special div.btn div.btn_another {
+  border-bottom: 1px solid #333333;
+}
+div#modal_movie div.movie_special div.btn div.btn_product {
+  float: right;
+}
+#sp div#modal_movie div.movie_special div.btn div.btn_product {
+  border-bottom: 1px solid #333333;
+}
+div#modal_movie div.btn_close {
+  z-index: 10;
+  display: none;
+  position: absolute;
+  top: -60px;
+  right: 0;
+}
+div#modal_movie div.btn_close.down {
+  top: 10px;
+}
+#sp div#modal_movie div.btn_close.down {
+  top: -10px;
+}
+#sp div#modal_movie div.btn_close {
+  zoom: 50%;
+  right: 10px;
+}
+
+/** border frame
+/**************************************/
+.border_frame {
+  display: block;
+  position: relative;
+}
+.border_frame::after, .border_frame::before, .border_frame span::after, .border_frame span::before {
+  background-color: #fff;
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 10;
+  transition: all .3s ease;
+  -webkit-transition: all .3s ease;
+}
+.border_frame::after {
+  height: 1px;
+  left: 0;
+  top: 0;
+  width: 0px;
+}
+.border_frame::before {
+  bottom: 0;
+  height: 1px;
+  right: 0;
+  width: 0px;
+}
+.border_frame span::after {
+  bottom: 0;
+  height: 0px;
+  left: 0;
+  width: 1px;
+}
+.border_frame span::before {
+  height: 0px;
+  right: 0;
+  top: 0;
+  width: 1px;
+}
+#pc .border_frame:hover::after, #pc .border_frame:hover::before {
+  width: 100%;
+}
+#pc .border_frame:hover span::after, #pc .border_frame:hover span::before {
+  height: 100%;
+}
+
+/** lib
+/**************************************/
+/** top
+/**************************************/
+div.gallery_top {
+  height: 576px;
+  position: relative;
+  width: 1200px;
+  margin-left: -112px;
+  color: #fff;
+  font-family: Reimin Y10 Regular, "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+#sp div.gallery_top {
+  width: 100%;
+  height: auto;
+  margin-left: 0;
+  background: #000;
+}
+div.gallery_top a.btn {
+  width: 600px;
+  height: 100%;
+  display: block;
+  z-index: 4;
+  position: absolute;
+  top: 0;
+}
+div.gallery_top a.btn.btn_focus {
+  left: 0;
+}
+div.gallery_top a.btn.btn_rapid {
+  right: 0;
+}
+div.gallery_top div#main_pc.focus div#area_focus {
+  width: 683px !important;
+}
+div.gallery_top div#main_pc.rapid div#area_focus {
+  width: 517px !important;
+}
+div.gallery_top div#main_pc.focus div#area_focus div.overlay {
+  opacity: 0.3;
+}
+div.gallery_top div#main_pc.rapid div#area_rapid div.overlay {
+  opacity: 0.3;
+}
+div.gallery_top div.overlay.slideout {
+  width: 0 !important;
+}
+div.gallery_top div.overlay_move {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: #fff;
+  opacity: 0;
+  display: none;
+}
+div.gallery_top div#main_pc div.area {
+  height: 576px;
+  background-repeat: no-repeat;
+  -webkit-transition: 0.4s ease-in-out;
+  -moz-transition: 0.4s ease-in-out;
+  -o-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+div.gallery_top div#main_pc div.area div.wrap {
+  height: 100%;
+}
+div.gallery_top div#main_pc div.area div.overlay {
+  background: #000;
+  opacity: 0.65;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+  -moz-transition: 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+  -o-transition: 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+div.gallery_top div#main_pc div.area#area_focus {
+  width: 600px;
+  z-index: 2;
+  background-position: left top;
+  background-image: url("../img/gallery/pic_focus.jpg");
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+  -moz-transition: 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+  -o-transition: 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+div.gallery_top div#main_pc div.area#area_focus div.title {
+  left: 161px;
+}
+div.gallery_top div#main_pc div.area#area_focus div.overlay {
+  -webkit-transform-origin: 100% 50%;
+  -moz-transform-origin: 100% 50%;
+  -ms-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+}
+div.gallery_top div#main_pc div.area#area_rapid {
+  width: 683px;
+  z-index: 1;
+  background-position: right top;
+  background-image: url("../img/gallery/pic_rapid.jpg");
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+div.gallery_top div#main_pc div.area#area_rapid div.title {
+  right: 209px;
+}
+div.gallery_top div#main_pc div.area div.title {
+  position: absolute;
+  bottom: 70px;
+}
+div.gallery_top div#bgm_wrap {
+  position: absolute;
+  z-index: 5;
+}
+
+/** common
+/**************************************/
+a.btn_top {
+  font-size: 14px;
+  position: relative;
+  display: inline-block;
+  padding-left: 13px;
+  z-index: 8;
+  color: #fff;
+  font-family: Reimin Y10 Regular, "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+  -webkit-transition: 0.4s ease-in-out;
+  -moz-transition: 0.4s ease-in-out;
+  -o-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+#sp a.btn_top {
+  font-size: 12px;
+  padding-left: 8px;
+}
+a.btn_top:hover {
+  opacity: 0.5;
+}
+div.gallery_top a.btn_top {
+  position: absolute;
+  top: 20px;
+  left: 115px;
+}
+#sp div.gallery_top a.btn_top {
+  left: 3.90625%;
+  top: 15px;
+}
+a.btn_top::before {
+  content: "";
+  vertical-align: middle;
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+#sp a.btn_top::before {
+  width: 4px;
+  height: 4px;
+}
+
+/** main SP
+/**************************************/
+div#main_sp div.item {
+  background: #000;
+  padding-bottom: 20px;
+}
+div#main_sp div.area {
+  position: relative;
+}
+div#main_sp div.area a {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+}
+div#main_sp div.area a.focus {
+  left: 0;
+}
+div#main_sp div.area a.rapid {
+  right: 0;
+}
+div#main_sp div.area img {
+  display: block;
+}
+
+/** headline
+/**************************************/
+div#main_pc {
+  text-align: center;
+}
+div#main_pc h1 {
+  z-index: 3;
+  margin-left: -221px;
+  position: absolute;
+  top: 98px;
+  left: 50%;
+}
+
+div#main_sp {
+  padding-top: 30px;
+}
+div#main_sp h1 {
+  width: 70.9375%;
+  margin: 0 auto 20px;
+}
+
+/** page
+/**************************************/
+div.gallery_page {
+  background: #000;
+  width: 1200px;
+  margin-left: -112px;
+  color: #fff;
+  padding-bottom: 60px;
+  font-family: Reimin Y10 Regular, "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+#sp div.gallery_page {
+  padding: 0 4.6875% 40px;
+  margin-left: 0;
+  width: auto;
+}
+div.gallery_page a {
+  color: #fff;
+}
+div.gallery_page div.head {
+  padding-top: 20px;
+}
+#sp div.gallery_page div.head {
+  padding-top: 10px;
+}
+div.gallery_page div.head div.bgm_control {
+  right: 0;
+}
+div.gallery_page div.headline {
+  text-align: center;
+  margin: 40px 0 0;
+}
+#sp div.gallery_page div.headline {
+  margin-top: 30px;
+}
+div.gallery_page div.headline div.cast {
+  color: #fff;
+}
+div.gallery_page div.headline div.cast > * {
+  display: inline-block;
+}
+div.gallery_page div.headline div.cast p {
+  font-size: 22px;
+  position: relative;
+}
+#sp div.gallery_page div.headline div.cast p {
+  font-size: 18px;
+}
+div.gallery_page div.headline div.cast p span {
+  font-size: 10px;
+  position: absolute;
+  top: -15px;
+  left: 0;
+}
+#sp div.gallery_page div.headline div.cast p span {
+  font-size: 8px;
+}
+div.gallery_page div.headline div.cast i {
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+div.gallery_page div.headline div.cast i::before, div.gallery_page div.headline div.cast i::after {
+  background: #fff;
+  display: block;
+  content: "";
+  top: 12px;
+}
+div.gallery_page div.headline div.cast i::before {
+  width: 20px;
+  height: 1px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  left: 0;
+}
+div.gallery_page div.headline div.cast i::after {
+  width: 20px;
+  height: 1px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  position: absolute;
+  right: 0;
+}
+div.gallery_page div.headline h1 {
+  margin-top: 30px;
+}
+#sp div.gallery_page div.headline h1 {
+  margin-top: 20px;
+}
+div.gallery_page div.headline h1 img {
+  display: none;
+}
+#sp div.gallery_page div.headline h1 img.sp {
+  display: inline-block;
+  width: 90%;
+  margin: 0 auto;
+}
+#pc div.gallery_page div.headline h1 img.pc {
+  display: inline-block;
+}
+div.gallery_page div.headline h1 span {
+  font-size: 15px;
+  margin-bottom: 12px;
+  display: block;
+  color: #fefefe;
+}
+#sp div.gallery_page div.headline h1 span {
+  font-size: 11px;
+  margin-bottom: 10px;
+}
+div.gallery_page div.btn_about {
+  text-align: right;
+  margin-top: -20px;
+}
+#sp div.gallery_page div.btn_about {
+  display: none;
+}
+div.gallery_page div.btn_about a {
+  text-align: right;
+  font-size: 14px;
+  position: relative;
+  display: inline-block;
+  padding-right: 33px;
+  -webkit-transition: 0.4s ease-in-out;
+  -moz-transition: 0.4s ease-in-out;
+  -o-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+div.gallery_page div.btn_about a::before {
+  content: "";
+  vertical-align: middle;
+  width: 8px;
+  height: 8px;
+  margin-top: -4px;
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 50%;
+  right: 20px;
+}
+div.gallery_page div.btn_about a:hover {
+  opacity: 0.5;
+}
+div.gallery_page div#thumb {
+  margin: 40px 0;
+}
+#sp div.gallery_page div#thumb {
+  margin: 20px 0;
+}
+div.gallery_page div#thumb ul li {
+  float: left;
+  margin: 0 10px 10px 0;
+  position: relative;
+}
+div.gallery_page div#thumb ul li.new::before {
+  content: "";
+  width: 55px;
+  height: 55px;
+  background: url("../img/gallery/icon_new.png") no-repeat left top;
+  background-size: 55px auto;
+  display: block;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#sp div.gallery_page div#thumb ul li.new::before {
+  width: 30px;
+  height: 30px;
+  background-size: 30px auto;
+}
+#sp div.gallery_page div#thumb ul li {
+  width: 48.5%;
+  margin: 0 3% 12px 0;
+}
+@media screen and (max-width: 320px) {
+  #sp div.gallery_page div#thumb ul li {
+    margin-bottom: 8px;
+  }
+}
+#pc div.gallery_page div#thumb ul li:nth-of-type(3n) {
+  margin-right: 0;
+}
+#sp div.gallery_page div#thumb ul li:nth-of-type(even) {
+  margin-right: 0;
+}
+div.gallery_page div#thumb ul li img {
+  display: block;
+  -webkit-transition: 0.4s ease-in-out;
+  -moz-transition: 0.4s ease-in-out;
+  -o-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+div.gallery_page div#thumb ul li a:hover img {
+  opacity: 0.6;
+}
+div.gallery_page div#btn_another {
+  width: 480px;
+  height: 76px;
+  margin: 0 auto;
+}
+#sp div.gallery_page div#btn_another {
+  width: 100%;
+  height: auto;
+  margin-top: 30px;
+}
+div.gallery_page div#btn_another a {
+  display: block;
+  line-height: 76px;
+  text-align: center;
+  font-size: 19px;
+  border: 1px solid #808080;
+  position: relative;
+  -webkit-transition: 0.4s ease-in-out;
+  -moz-transition: 0.4s ease-in-out;
+  -o-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+#sp div.gallery_page div#btn_another a {
+  line-height: 55px;
+  font-size: 15px;
+}
+div.gallery_page div#btn_another:not(.modal) a::before {
+  content: "";
+  vertical-align: middle;
+  width: 15px;
+  height: 15px;
+  margin-top: -7.5px;
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 50%;
+  right: 20px;
+}
+#sp div.gallery_page div#btn_another:not(.modal) a::before {
+  zoom: 80%;
+}
+div.gallery_page div#btn_another::before {
+  bottom: -1px;
+}
+div.gallery_page div#btn_another.modal a::before {
+  content: "";
+  box-sizing: border-box;
+  height: 4px;
+  border: 4px solid transparent;
+  border-left: 6px solid #fff;
+  vertical-align: middle;
+  z-index: 2;
+  margin-top: -4px;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+}
+div.gallery_page div#btn_another.modal a::after {
+  content: "";
+  width: 22px;
+  height: 22px;
+  background: #333333;
+  z-index: 1;
+  margin-top: -11px;
+  -webkit-border-radius: 11px;
+  -moz-border-radius: 11px;
+  border-radius: 11px;
+  position: absolute;
+  top: 50%;
+  right: 12px;
+}
+
+/** modal
+/**************************************/
+#sp div.mfp-wrap.of {
+  overflow: hidden !important;
+}
+
+div.modal_gallery {
+  height: 600px;
+  overflow: hidden;
+  color: #fff;
+  width: 800px;
+  margin: 0 auto;
+  position: relative;
+  padding: 60px 0;
+  font-family: Reimin Y10 Regular, "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+#sp div.modal_gallery {
+  height: auto;
+  width: 100%;
+}
+div.modal_gallery div.modal_main {
+  float: left;
+  width: 538px;
+}
+#sp div.modal_gallery div.modal_main {
+  width: 100%;
+}
+div.modal_gallery div.modal_main div.loading {
+  width: 100%;
+  height: 402px;
+  background: #121212;
+}
+#sp div.modal_gallery div.modal_main div.loading {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  width: 310px;
+  height: 232px;
+  margin-left: -155px;
+}
+div.modal_gallery div.modal_main div.loading > div {
+  position: relative;
+  height: 100%;
+}
+div.modal_gallery div.modal_main div.loading > div::before {
+  content: "Loading";
+  font-size: 18px;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 40%;
+}
+#sp div.modal_gallery div.modal_main div.loading > div::before {
+  font-size: 15px;
+}
+div.modal_gallery div.modal_main div.loading > div div.bar {
+  width: 262px;
+  height: 1px;
+  background: #4f4f4f;
+  margin-left: -131px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+#sp div.modal_gallery div.modal_main div.loading > div div.bar {
+  width: 150px;
+  margin-left: -75px;
+  top: 55%;
+}
+div.modal_gallery div.modal_main div.loading > div div.bar span {
+  display: block;
+  width: 0;
+  height: 1px;
+  background: #fff;
+}
+div.modal_gallery div.modal_main p.note {
+  text-align: center;
+  position: relative;
+  margin-top: 30px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+div.modal_gallery div.modal_main p.note span {
+  color: #fff;
+  font-size: 11px;
+  display: block;
+  margin-top: 20px;
+  opacity: 0.5;
+}
+#sp div.modal_gallery div.modal_main p.note span {
+  margin-top: 20px;
+  font-size: 9px;
+}
+@media screen and (max-width: 320px) {
+  #sp div.modal_gallery div.modal_main p.note span {
+    margin-top: 10px;
+  }
+}
+#sp div.modal_gallery div.modal_main p.note {
+  font-size: 12px;
+  line-height: 1.4;
+  margin-top: 10px;
+}
+div.modal_gallery div.modal_main p.note br {
+  display: none;
+}
+#sp div.modal_gallery div.modal_main p.note br {
+  display: block;
+}
+div.modal_gallery#modal_focus div.modal_main {
+  height: 340px;
+}
+div.modal_gallery#modal_focus div.modal_main p.note {
+  margin-top: 20px;
+}
+div.modal_gallery#modal_rapid div.modal_main {
+  height: 364px;
+}
+div.modal_gallery div.modal_thumb {
+  float: right;
+}
+#sp div.modal_gallery div.modal_thumb {
+  display: none;
+}
+div.modal_gallery div.modal_thumb div.modal_thumb_frame {
+  width: 180px;
+  height: 510px;
+  overflow: hidden;
+}
+div.modal_gallery div.modal_thumb div.modal_thumb_frame ul li {
+  margin-bottom: 8px;
+  width: 138px;
+  position: relative;
+}
+div.modal_gallery div.modal_thumb div.modal_thumb_frame ul li.active img {
+  opacity: 1;
+}
+div.modal_gallery div.modal_thumb div.modal_thumb_frame ul li a img {
+  opacity: 0.27;
+  border: 1px solid #fff;
+}
+div.modal_gallery div.modal_thumb div.modal_thumb_frame ul li img {
+  width: 136px;
+  height: auto;
+  display: block;
+}
+div.modal_gallery div.modal_thumb div.modal_thumb_frame ul li.active div.border_frame:hover::after, div.modal_gallery div.modal_thumb div.modal_thumb_frame ul li.active div.border_frame:hover::before, div.modal_gallery div.modal_thumb div.modal_thumb_frame ul li.active div.border_frame:hover span::after, div.modal_gallery div.modal_thumb div.modal_thumb_frame ul li.active div.border_frame:hover span::before {
+  height: 0 !important;
+  width: 0 !important;
+}
+div.modal_gallery div.modal_thumb div.modal_thumb_frame ul div.border_frame span::after {
+  left: 0;
+}
+div.modal_gallery div.modal_thumb div.modal_thumb_frame ul div.border_frame::after {
+  top: 0;
+}
+div.modal_gallery div.modal_thumb .jspContainer {
+  overflow: hidden;
+  position: relative;
+}
+div.modal_gallery div.modal_thumb .jspPane {
+  position: absolute;
+}
+div.modal_gallery div.modal_thumb .jspVerticalBar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 100%;
+}
+div.modal_gallery div.modal_thumb .jspTrack {
+  background: black !important;
+  position: relative;
+}
+div.modal_gallery div.modal_thumb .jspTrack::before {
+  background: #545455;
+  width: 1px;
+  height: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+div.modal_gallery div.modal_thumb .jspDrag {
+  background: transparent;
+  position: relative;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+div.modal_gallery div.modal_thumb .jspDrag::before {
+  background: #fff;
+  width: 1px;
+  height: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+div.modal_gallery div.modal_thumb .jspHorizontalBar .jspTrack, div.modal_gallery div.modal_thumb .jspHorizontalBar .jspDrag {
+  float: left;
+  height: 100%;
+}
+
+/** rapid slider
+/**************************************/
+div#modal_rapid div.rapid_contents {
+  position: relative;
+  left: 50%;
+  margin-left: -268px;
+}
+#sp div#modal_rapid div.rapid_contents {
+  margin-left: -155px;
+}
+div#modal_rapid div.rapid_contents div.out {
+  position: relative;
+  top: 0;
+  width: 536px;
+  height: 402px;
+  overflow: hidden;
+}
+#sp div#modal_rapid div.rapid_contents div.out {
+  width: 310px;
+  height: 233px;
+}
+div#modal_rapid div.rapid_contents div.img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+div#modal_rapid div.rapid_contents div.content {
+  overflow-x: hidden;
+  width: 536px;
+  height: 402px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: none repeat scroll 0 0 transparent;
+}
+#sp div#modal_rapid div.rapid_contents div.content {
+  width: 310px;
+  height: 233px;
+}
+div#modal_rapid div.rapid_contents div.dammy_line {
+  width: 536px;
+  height: 2px;
+  background: #000;
+  position: relative;
+  z-index: 100;
+}
+div#modal_rapid div.rapid_contents div.dammy_line.top {
+  margin-bottom: -2px;
+}
+div#modal_rapid div.rapid_contents div.dammy_line.bot {
+  margin-top: -2px;
+}
+#sp div#modal_rapid div.rapid_contents div.dammy_line {
+  width: 310px;
+}
+div#modal_rapid div.rapid_contents div.ui-widget-content {
+  height: 64px;
+  border: none;
+  background-repeat: no-repeat;
+  background-color: none;
+}
+#sp div#modal_rapid div.rapid_contents div.ui-widget-content {
+  background-size: 310px auto;
+}
+div#modal_rapid div.rapid_contents div.slider {
+  width: 439px;
+  margin: 38px 0 50px 50px;
+  position: relative;
+}
+#sp div#modal_rapid div.rapid_contents div.slider {
+  width: 245px;
+  margin: 25px 0 0 50px;
+}
+div#modal_rapid div.rapid_contents div.slider::before {
+  content: "";
+  width: 538px;
+  height: 67px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: -51px;
+}
+#sp div#modal_rapid div.rapid_contents div.slider::before {
+  background-size: 310px auto;
+  background-repeat: no-repeat;
+  width: 310px;
+}
+div#modal_rapid div.rapid_contents div.slider div.ui-slider-range {
+  display: none;
+}
+div#modal_rapid div.rapid_contents div.slider a.ui-slider-handle {
+  border: none;
+  background: none;
+  width: 95px;
+  height: 70px;
+  overflow: hidden;
+  margin-left: -48.5px;
+  cursor: pointer;
+  background-size: 95px auto;
+  top: -3px;
+  border: 1px solid #fff;
+  box-shadow: 0px 0px 6px -2px #000000;
+  -moz-box-shadow: 0px 0px 6px -2px #000000;
+  -webkit-box-shadow: 0px 0px 6px -2px #000000;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  border-radius: 0 !important;
+}
+#sp div#modal_rapid div.rapid_contents div.slider a.ui-slider-handle {
+  margin-left: -50px;
+  -webkit-transform: scale3d(0.65, 0.65, 0.65);
+  -moz-transform: scale3d(0.65, 0.65, 0.65);
+  -ms-transform: scale3d(0.65, 0.65, 0.65);
+  -o-transform: scale3d(0.65, 0.65, 0.65);
+  transform: scale3d(0.65, 0.65, 0.65);
+  -webkit-transform-origin: left top;
+  -moz-transform-origin: left top;
+  -ms-transform-origin: left top;
+  -o-transform-origin: left top;
+  transform-origin: left top;
+}
+div#modal_rapid div.rapid_contents#rapid01 div.slider::before {
+  background-image: url("../img/rapid/gauge01.jpg");
+}
+div#modal_rapid div.rapid_contents#rapid02 div.slider::before {
+  background-image: url("../img/rapid/gauge02.jpg");
+}
+div#modal_rapid div.rapid_contents#rapid03 div.slider::before {
+  background-image: url("../img/rapid/gauge03.jpg");
+}
+div#modal_rapid div.rapid_contents#rapid04 div.slider::before {
+  background-image: url("../img/rapid/gauge04.jpg");
+}
+div#modal_rapid div.rapid_contents#rapid05 div.slider::before {
+  background-image: url("../img/rapid/gauge05.jpg");
+}
+div#modal_rapid div.rapid_contents#rapid05 div.slider {
+  width: 480px;
+  margin-left: 25px;
+}
+#sp div#modal_rapid div.rapid_contents#rapid05 div.slider {
+  width: 274px;
+}
+div#modal_rapid div.rapid_contents#rapid05 div.slider::before {
+  left: -29px;
+}
+div#modal_rapid div.rapid_contents#rapid05 a.ui-slider-handle {
+  width: 53px;
+  overflow: hidden;
+  margin-left: -26.5px !important;
+}
+#sp div#modal_rapid div.rapid_contents#rapid05 a.ui-slider-handle {
+  margin-left: -27.5px !important;
+}
+div#modal_rapid p::before {
+  content: url("../img/rapid/icon_arrow.png");
+  margin-left: -34px;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+}
+#sp div#modal_rapid p::before {
+  zoom: 60%;
+}
+
+/** focus content
+/**************************************/
+#sp div.focus_contents {
+  width: 310px;
+  margin: 0 auto;
+}
+div.focus_contents div.content {
+  position: relative;
+  width: 536px;
+  height: 402px;
+}
+#sp div.focus_contents div.content {
+  width: 100%;
+  height: auto;
+}
+div.focus_contents div.content img {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  		/*-webkit-transition:0.5s ease-out;
+         -moz-transition:0.5s ease-out;
+           -o-transition:0.5s ease-out;
+              transition:0.5s ease-out;*/
+}
+div.focus_contents div.content img.active {
+  opacity: 1;
+}
+div.focus_contents div.btn {
+  text-align: center;
+  margin-top: 19px;
+}
+#sp div.focus_contents div.btn > div {
+  display: block;
+  float: left;
+}
+#sp div.focus_contents div.btn > div:last-child {
+  margin-right: 0 !important;
+}
+#sp div.focus_contents div.btn > div a {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  font-size: 14px;
+  line-height: 45px;
+}
+#sp div.focus_contents div.btn#line2 > div {
+  width: 45%;
+  margin-right: 5%;
+}
+#sp div.focus_contents div.btn#line2 > div:last-child {
+  float: right;
+}
+#sp div.focus_contents div.btn#line3 > div {
+  width: 30%;
+  margin-right: 5%;
+}
+div.focus_contents div.btn > div {
+  display: inline-block;
+}
+div.focus_contents div.btn > div.active a {
+  border: 1px solid #fff;
+}
+div.focus_contents div.btn > div a {
+  display: inline-block;
+  width: 138px;
+  height: 52px;
+  line-height: 52px;
+  font-size: 20px;
+  color: #fff;
+  border: 1px solid #4d4d4d;
+  position: relative;
+}
+div.focus_contents div.btn > div a::before {
+  content: "";
+  vertical-align: middle;
+  width: 15px;
+  height: 15px;
+  margin-top: -7.5px;
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  position: absolute;
+  top: 50%;
+}
+#sp div.focus_contents div.btn > div a::before {
+  zoom: 80%;
+}
+div.focus_contents div.btn > div a.btn_1::before {
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+  left: 13px;
+}
+div.focus_contents div.btn > div a.btn_3::before {
+  display: none;
+}
+div.focus_contents div.btn > div a.btn_2::before {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  right: 13px;
+}
+
+/** modal about
+/**************************************/
+div#modal_about {
+  text-align: center;
+  padding: 60px 0;
+  color: #fff;
+  font-family: Reimin Y10 Regular, "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+div#modal_about.about_focus div.about_main {
+  width: 710px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+#sp div#modal_about.about_focus div.about_main {
+  width: 100%;
+  width: 83.75%;
+}
+div#modal_about.about_rapid div.about_main {
+  width: 880px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+#sp div#modal_about.about_rapid div.about_main {
+  width: 83.75%;
+}
+div#modal_about h2 {
+  font-size: 34px;
+  font-weight: normal;
+  margin-bottom: 40px;
+}
+#sp div#modal_about h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+div#modal_about p.tx {
+  font-size: 15px;
+  line-height: 2;
+  margin-bottom: 30px;
+}
+#sp div#modal_about p.tx {
+  font-size: 12px;
+  text-align: left;
+  line-height: 1.8;
+}
+#sp div#modal_about p.tx br {
+  display: none;
+}
+div#modal_about div.box_focus > div:nth-of-type(odd) {
+  float: left;
+}
+div#modal_about div.box_focus > div:nth-of-type(even) {
+  float: right;
+}
+#sp div#modal_about div.box_focus > div {
+  width: 48%;
+}
+div#modal_about div.box_focus h3 {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+#sp div#modal_about div.box_focus h3 {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+div#modal_about div.box_focus h3 span {
+  font-size: 26px;
+  color: #ca164d;
+  margin-right: 10px;
+}
+#sp div#modal_about div.box_focus h3 span {
+  font-size: 20px;
+  margin-right: 5px;
+}
+div#modal_about div.box_focus p {
+  color: #ca164d;
+  font-size: 16px;
+  margin-top: 10px;
+}
+#sp div#modal_about div.box_focus p {
+  font-size: 12px;
+  margin-top: 5px;
+  line-height: 1.2;
+}
+div#modal_about div.box_rapid {
+  width: 100%;
+  position: relative;
+  margin-top: 50px;
+}
+#sp div#modal_about div.box_rapid {
+  margin-top: 25px;
+}
+div#modal_about div.box_rapid img {
+  float: right;
+}
+#sp div#modal_about div.box_rapid img {
+  width: 80.22388%;
+}
+div#modal_about div.box_rapid p {
+  font-size: 20px;
+  line-height: 1.5;
+  position: absolute;
+  left: 20px;
+}
+#sp div#modal_about div.box_rapid p {
+  font-size: 14px;
+  left: 0;
+}
+div#modal_about div.box_rapid p span {
+  font-size: 14px;
+  display: block;
+}
+#sp div#modal_about div.box_rapid p span {
+  font-size: 12px;
+}
+div#modal_about div.box_rapid p.tx01 {
+  color: #ca164d;
+  top: 57px;
+}
+#sp div#modal_about div.box_rapid p.tx01 {
+  top: 9%;
+}
+@media screen and (max-width: 320px) {
+  #sp div#modal_about div.box_rapid p.tx01 {
+    zoom: 90%;
+  }
+}
+div#modal_about div.box_rapid p.tx02 {
+  top: 172px;
+}
+#sp div#modal_about div.box_rapid p.tx02 {
+  top: 32%;
+}
+@media screen and (max-width: 320px) {
+  #sp div#modal_about div.box_rapid p.tx02 {
+    zoom: 90%;
+  }
+}
+div#modal_about div.yb {
+  margin-top: 60px;
+}
+div#modal_about div.yb h4 {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+#sp div#modal_about div.yb h4 {
+  font-size: 19px;
+}
+@media screen and (max-width: 320px) {
+  #sp div#modal_about div.yb h4 {
+    font-size: 17px;
+  }
+}
+#sp div#modal_about div.yb {
+  margin-top: 40px;
+}
+#sp div#modal_about div.yb > div {
+  position: relative;
+  position: relative;
+  padding-top: 56.25%;
+}
+#sp div#modal_about div.yb iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/*# sourceMappingURL=lumix.css.map */

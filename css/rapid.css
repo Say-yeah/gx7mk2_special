@@ -1,0 +1,45 @@
+/** common
+/**************************************/
+.slider {
+  width: 300px;
+  margin: 100px 0;
+}
+
+.slider .ui-slider-range {
+  background: #729fcf;
+}
+
+.slider .ui-slider-handle {
+  border-color: #729fcf;
+}
+
+.rapid {
+  position: relative;
+  left: 50%;
+  margin-left: -475px;
+  top: 25%;
+}
+.rapid .out {
+  position: relative;
+  top: 0;
+  height: 400px;
+  width: 1050px;
+  overflow: hidden;
+}
+.rapid .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.rapid .content {
+  overflow-x: hidden;
+  width: 1050px;
+  height: 400px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: none repeat scroll 0 0 transparent;
+}
+
+/*# sourceMappingURL=rapid.css.map */

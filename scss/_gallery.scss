@@ -1,0 +1,1411 @@
+@charset "UTF-8";
+
+
+
+/** lib
+/**************************************/
+$sec : 0.8s;
+@mixin tranIntro() {
+	-webkit-transition:$sec $easeOutExpo;
+       -moz-transition:$sec $easeOutExpo;
+         -o-transition:$sec $easeOutExpo;
+            transition:$sec $easeOutExpo;
+}
+
+$w_add : 83;
+
+
+@mixin transform-origin($val) {
+	-webkit-transform-origin: $val;
+	-moz-transform-origin: $val;
+	-ms-transform-origin: $val;
+	transform-origin: $val;
+}
+
+/** top
+/**************************************/
+div.gallery_top {
+	height:          576px;
+	position:        relative;
+	width:           1200px;
+	margin-left:     -112px;
+	color:           #fff;
+	@include tx-min;
+	
+	#sp & {
+		width:           100%;
+		height:          auto;
+		margin-left:     0;
+		background:      #000;
+	}
+
+
+// btn
+a.btn {
+	width:           600px;
+	height:          100%;
+	display:         block;
+	z-index:         4;
+	@include position($top: 0);
+	
+	&.btn_focus {
+		left:            0;
+	}
+	
+	&.btn_rapid {
+		right:           0;
+	}
+}
+
+
+
+// mouseover
+div#main_pc.focus div#area_focus {
+	width:           (600+$w_add)+px !important;
+}
+
+div#main_pc.rapid div#area_focus {
+	width:           (600-$w_add)+px !important;
+}
+
+div#main_pc.focus {
+	div#area_focus {
+		div.overlay {
+			opacity:         0.3;
+		}
+	}
+}
+
+div#main_pc.rapid {
+	div#area_rapid {
+		div.overlay {
+			opacity:         0.3;
+		}
+	}
+}
+
+div.overlay.slideout {
+	width:           0 !important;
+}
+
+
+
+// overlay_move
+div.overlay_move {
+	position:        fixed;
+	width:           100%;
+	height:          100%;
+	top:             0;
+	left:            0;
+	z-index:         100;
+	background:      #fff;
+	opacity:         0;
+	display:         none;
+}
+
+
+
+// area
+div#main_pc div.area {
+	height:          576px;
+	background-repeat: no-repeat;
+	@include tran;
+	
+	div.wrap {
+		height:          100%;
+	}
+	
+	div.overlay {
+		background:      #000;
+		opacity:         0.65;
+		width:           100%;
+		height:          100%;
+		@include position($top: 0, $left: 0);
+		
+		
+		
+		-webkit-transition:1.5s $easeOutExpo;
+	       -moz-transition:1.5s $easeOutExpo;
+	         -o-transition:1.5s $easeOutExpo;
+	            transition:1.5s $easeOutExpo;
+	}
+	
+	&#area_focus {
+		width:           600px;
+		z-index:         2;
+		background-position: left top;
+		background-image: url( "../img/gallery/pic_focus.jpg" );
+		@include position($top: 0, $left: 0);
+		@include tranIntro;
+		
+		div.title {
+			left:            161px;
+		}
+		
+		div.overlay {
+			@include transform-origin(100% 50%);
+		}
+	}
+	
+	&#area_rapid {
+		width:           (600+$w_add)+px;
+		z-index:         1;
+		background-position: right top;
+		background-image: url( "../img/gallery/pic_rapid.jpg" );
+		@include position($top: 0, $right: 0);
+		
+		div.title {
+			right:           209px;
+		}
+	}
+	
+	div.title {
+		@include position($bottom: 70px);
+	}
+}
+
+
+
+// bgm
+div#bgm_wrap {
+	position:        absolute;
+	z-index:         5;
+}
+}
+
+
+
+/** common
+/**************************************/
+a.btn_top {
+	font-size:       14px;
+	position:        relative;
+	display:         inline-block;
+	padding-left:    13px;
+	z-index:         8;
+	color:           #fff;
+	@include tx-min;
+	@include tran;
+	
+	#sp & {
+		font-size:       12px;
+		padding-left:    8px;
+	}
+	
+	&:hover {
+		opacity:         0.5;
+	}
+	
+	div.gallery_top & {
+		@include position($top: 20px, $left: 115px);
+		
+		#sp & {
+			left:            (25/640)*100%;
+			top:             15px;
+		}
+	}
+	
+	&::before {
+		content:         "";
+		vertical-align:  middle;
+		@include position($top: 3px, $left: 0);
+		width:           6px;
+		height:          6px;
+		border-top:      2px solid #fff;
+		border-right:    2px solid #fff;
+		-webkit-transform: rotate(-135deg);
+		transform: rotate(-135deg);
+		
+		#sp & {
+			width:           4px;
+			height:          4px;
+		}
+	}
+}
+
+
+/** main SP
+/**************************************/
+div#main_sp {
+	div.item {
+		background:      #000;
+		padding-bottom:  20px;
+	}
+	
+	div.area {
+		position:        relative;
+		
+		a {
+			position:        absolute;
+			width:           50%;
+			height:          100%;
+			
+			&.focus {
+				left:            0;
+			}
+			
+			&.rapid {
+				right:           0;
+			}
+		}
+		
+		img {
+			display:         block;
+		}
+	}
+}
+
+
+
+/** headline
+/**************************************/
+div#main_pc {
+	text-align:      center;
+	
+	h1 {
+		z-index:         3;
+		margin-left:     -(434/2)-4+px;
+		@include position($top: 100-2px, $left: 50%);
+	}
+}
+
+div#main_sp {
+	padding-top:     30px;
+	
+	h1 {
+		width:           (454/640)*100%;
+		margin:          0 auto 20px;
+	}
+}
+
+
+
+/** page
+/**************************************/
+div.gallery_page {
+	background:      #000;
+	width:           1200px;
+	margin-left:     -112px;
+	color:           #fff;
+	padding-bottom:  60px;
+	@include tx-min;
+	
+	#sp & {
+		padding:         0 (30/640)*100% 40px;
+		margin-left:     0;
+		width:           auto;
+	}
+	
+	a {
+		color:           #fff;
+	}
+
+
+
+div#main {
+	@extend %wrap;
+}
+
+
+
+div.head {
+	padding-top:     20px;
+	
+	#sp & {
+		padding-top:     10px;
+	}
+	
+	div.bgm_control {
+		right:           0;
+	}
+}
+
+
+
+div.headline {
+	text-align:      center;
+	margin:          40px 0 0;
+	
+	#sp & {
+		margin-top:      30px;
+	}
+	
+	div.cast {
+		color:           #fff;
+		
+		> * {
+			display:         inline-block;
+		}
+		
+		p {
+			font-size:       22px;
+			position:        relative;
+			
+			#sp & {
+				font-size:       18px;
+			}
+			
+			span {
+				font-size:       10px;
+				@include position($top: -15px, $left: 0);
+				
+				#sp & {
+					font-size:       8px;
+				}
+			}
+		}
+		
+		i {
+			width:           20px;
+			height:          20px;
+			position:        relative;
+			
+			&::before,
+			&::after {
+				background:      #fff;
+				display:         block;
+				content:         "";
+				top:             12px;
+			}
+			
+			&::before {
+				width:           20px;
+				height:          1px;
+				@include rotate(45deg);
+				@include position($left: 0);
+			}
+			
+			&::after {
+				width:           20px;
+				height:          1px;
+				@include rotate(-45deg);
+				@include position($right: 0);
+			}
+		}
+	}
+	
+	h1 {
+		margin-top:      30px;
+		
+		#sp & {
+			margin-top:      20px;
+		}
+		
+		img {
+			display:         none;
+			
+			#sp &.sp {
+				display:         inline-block;
+				width:           90%;
+				margin:          0 auto;
+			}
+			
+			#pc &.pc {
+				display:         inline-block;
+			}
+		}
+		
+		span {
+			font-size:       15px;
+			margin-bottom:   12px;
+			display:         block;
+			color:           #fefefe;
+			
+			#sp & {
+				font-size:       11px;
+				margin-bottom:   10px;
+			}
+		}
+	}
+}
+
+
+div.btn_about {
+	text-align:      right;
+	margin-top:      -20px;
+	
+	#sp & {
+		display:         none;
+	}
+	
+	a {
+		text-align:      right;
+		font-size:       14px;
+		position:        relative;
+		display:         inline-block;
+		padding-right:   33px;
+		@include tran;
+		
+		&::before {
+			content:         "";
+			vertical-align:  middle;
+			width:           8px;
+			height:          8px;
+			margin-top:      -(8/2)+px;
+			border-top:      1px solid #fff;
+			border-right:    1px solid #fff;
+			-webkit-transform: rotate(45deg);
+			transform: rotate(45deg);
+			@include position($top: 50%, $right: 20px);
+		}
+		
+		&:hover {
+			opacity:         0.5;
+		}
+	}
+}
+
+
+div#thumb {
+	margin:          40px 0;
+	
+	#sp & {
+		margin:          20px 0;
+	}
+	
+	ul {
+		@extend %cl;
+		
+		li {
+			float:           left;
+			margin:          0 10px 10px 0;
+			position:        relative;
+			
+			&.new {
+				&::before {
+					content:         "";
+					width:           55px;
+					height:          55px;
+					background:      url( "../img/gallery/icon_new.png" ) no-repeat left top;
+					background-size: 55px auto;
+					display:         block;
+					z-index:         1;
+					@include position($top: 0, $left: 0);
+					
+					#sp & {
+						width:           30px;
+						height:          30px;
+						background-size: 30px auto;
+					}
+				}
+			}
+			
+			#sp & {
+				width:           48.5%;
+				margin:          0 3% 12px 0;
+				
+				@media screen and (max-width:320px) {
+					margin-bottom:   8px;
+				}
+			}
+			
+			#pc &:nth-of-type(3n) {
+				margin-right:    0;
+			}
+			
+			#sp &:nth-of-type(even) {
+				margin-right:    0;
+			}
+			
+			img {
+				display:         block;
+				@include tran;
+			}
+			
+			a {
+				&:hover img {
+					opacity:         0.6;
+				}
+			}
+		}
+	}
+}
+
+
+
+div#btn_another {
+	width:           480px;
+	height:          76px;
+	margin:          0 auto;
+	
+	#sp & {
+		width:           100%;
+		height:          auto;
+		margin-top:      30px;
+	}
+	
+	a {
+		display:         block;
+		line-height:     76px;
+		text-align:      center;
+		font-size:       19px;
+		border:          1px solid #808080;
+		position:        relative;
+		@include tran;
+		
+		#sp & {
+			line-height:     55px;
+			font-size:       15px;
+		}
+	}
+	
+	&:not(.modal) {
+		a {
+			&::before {
+				content:         "";
+				vertical-align:  middle;
+				width:           15px;
+				height:          15px;
+				margin-top:      -(15/2)+px;
+				border-top:      1px solid #fff;
+				border-right:    1px solid #fff;
+				-webkit-transform: rotate(45deg);
+				transform: rotate(45deg);
+				@include position($top: 50%, $right: 20px);
+				
+				#sp & {
+					zoom:            80%;
+				}
+			}
+		}
+	}
+	
+	&::before {
+		bottom:          -1px;
+	}
+	
+	&.modal {
+		a {
+			&::before {
+				content:         "";
+				box-sizing: border-box;
+				height: 4px;
+				border: 4px solid transparent;
+				border-left: 6px solid #fff;
+				vertical-align:  middle;
+				z-index:         2;
+				margin-top:      -4px;
+				@include position($top: 50%, $right: 15px);
+			}
+			
+			&::after {
+				content:         "";
+				width:           22px;
+				height:          22px;
+				background:      #333333;
+				z-index:         1;
+				margin-top:      -11px;
+				-webkit-border-radius: 11px;
+				   -moz-border-radius: 11px;
+				        border-radius: 11px;
+				@include position($top: 50%, $right: 12px);
+			}
+		}
+	}
+}
+}
+
+
+
+/** modal
+/**************************************/
+div.mfp-wrap {
+	&.of {
+		#sp & {
+			overflow:        hidden !important;
+		}
+	}
+}
+
+div.modal_gallery {
+	height:          600px;
+	overflow:        hidden;
+	color:           #fff;
+	width:           800px;
+	margin:          0 auto;
+	position:        relative;
+	padding:         60px 0;
+	@include tx-min;
+	@extend %cl;
+	
+	#sp & {
+		height:          auto;
+		width:           100%;
+	}
+	
+	div.modal_main {
+		float:           left;
+		width:           538px;
+		
+		#sp & {
+			width:           100%;
+		}
+		
+		div.loading {
+			width:           100%;
+			height:          402px;
+			background:      #121212;
+			
+			#sp & {
+				@include position($top: 60px, $left: 50%);
+				width:           310px;
+				height:          232px;
+				margin-left:     -(310/2)+px;
+			}
+			
+			> div {
+				position:        relative;
+				height:          100%;
+				
+				&::before {
+					content:         "Loading";
+					font-size:       18px;
+					width:           100%;
+					text-align:      center;
+					@include position($top: 40%);
+					
+					#sp & {
+						font-size:       15px;
+					}
+				}
+				
+				div.bar {
+					width:           262px;
+					height:          1px;
+					background:      #4f4f4f;
+					margin-left:     -(262/2)+px;
+					@include position($top: 50%, $left: 50%);
+					
+					#sp & {
+						width:           150px;
+						margin-left:     -(150/2)+px;
+						top:             55%;
+					}
+					
+					span {
+						display:         block;
+						width:           0;
+						height:          1px;
+						background:      #fff;
+					}
+				}
+			}
+		}
+		
+		p.note {
+			text-align:      center;
+			position:        relative;
+			margin-top:      30px;
+			font-size:       14px;
+			line-height:     1.8;
+			
+			span {
+				color:           #fff;
+				font-size:       11px;
+				display:         block;
+				margin-top:      20px;
+				opacity:         0.5;
+				
+				#sp & {
+					margin-top:      20px;
+					font-size:       9px;
+					
+					@media screen and (max-width:320px) {
+						margin-top:      10px;
+					}
+				}
+			}
+			
+			#sp & {
+				font-size:       12px;
+				line-height:     1.4;
+				margin-top:      10px;
+			}
+			
+			br {
+				display:         none;
+				
+				#sp & {
+					display:         block;
+				}
+			}
+		}
+	}
+	
+	&#modal_focus {
+		
+		div.modal_main {
+			height:          340px;
+			
+			p.note {
+				margin-top:      20px;
+			}
+		}
+	}
+	
+	&#modal_rapid {
+		
+		div.modal_main {
+			height:          364px;
+		}
+	}
+	
+	div.modal_thumb {
+		float:           right;
+		
+		#sp & {
+			display:         none;
+		}
+		
+		div.modal_thumb_frame {
+			width:           180px;
+			height:          510px;
+			overflow:        hidden;
+			
+			ul {
+				li {
+					margin-bottom:   8px;
+					width:           138px;
+					position:        relative;
+					
+					&.active {
+						img {
+							opacity:         1;
+						}
+					}
+					
+					a {
+						img {
+							opacity:         0.27;
+							border:          1px solid #fff;
+						}
+					}
+					
+					img {
+						width:           136px;
+						height:          auto;
+						display:         block;
+					}
+					
+					&.active {
+						div.border_frame {
+							&:hover::after,
+							&:hover::before,
+							&:hover span::after,
+							&:hover span::before {
+							  height: 0 !important;
+							  width:  0 !important;
+							}
+						}
+					}
+				}
+				
+				div.border_frame {
+					span::after {
+						left:            0;
+					}
+					
+					&::after {
+						top:             0;
+					}
+				}
+			}
+		}
+		
+		.jspContainer {
+			overflow:        hidden;
+			position:        relative;
+		}
+		.jspPane {
+			position:        absolute;
+		}
+		
+		.jspVerticalBar {
+			position:        absolute;
+			top:             0;
+			right:           0;
+			width:           20px;
+			height:          100%;
+		}
+		
+		.jspTrack {
+			background:      rgba(0, 0, 0, 1) !important;
+			position:        relative;
+			
+			&::before {
+				background:      #545455;
+				width:           1px;
+				height:          100%;
+				content:         "";
+				@include position($top: 0, $right: 0);
+			}
+		}
+		
+		.jspDrag {
+			background:      rgba(0, 0, 0, 0);
+			position:        relative;
+			top:             0;
+			left:            0;
+			cursor:          pointer;
+			
+			&::before {
+				background:      #fff;
+				width:           1px;
+				height:          100%;
+				content:         "";
+				@include position($top: 0, $right: 0);
+			}
+		}
+		
+		.jspHorizontalBar .jspTrack, .jspHorizontalBar .jspDrag {
+			float:           left;
+			height:          100%;
+		}
+	}
+}
+
+
+
+/** rapid slider
+/**************************************/
+div#modal_rapid {
+	
+	div.rapid_contents {
+		position:        relative;
+		left:            50%;
+		margin-left:     -(536/2)+px;
+		
+		#sp & {
+			margin-left:     -(310/2)+px;
+		}
+		
+		div.out {
+			position:        relative;
+			top:             0;
+			width:           536px;
+			height:          402px;
+			overflow:        hidden;
+			
+			#sp & {
+				width:           310px;
+				height:          233px;
+			}
+		}
+		
+		div.img {
+			position:        absolute;
+			top:             0;
+			left:            0;
+		}
+		
+		div.content {
+			overflow-x:      hidden;
+			width:           536px;
+			height:          402px;
+			position:        absolute;
+			top:             0;
+			left:            0;
+			z-index:         100;
+			background: none repeat scroll 0 0 transparent;
+			
+			#sp & {
+				width:           310px;
+				height:          233px;
+			}
+		}
+		
+		div.dammy_line {
+			width:           536px;
+			height:          2px;
+			background:      #000;
+			position:        relative;
+			z-index:         100;
+			
+			&.top {
+				margin-bottom:      -2px;
+			}
+			
+			&.bot {
+				margin-top:      -2px;
+			}
+			
+			#sp & {
+				width:           310px;
+			}
+		}
+		
+		div.ui-widget-content {
+			height:          64px;
+			border:          none;
+			background-repeat: no-repeat;
+			background-color:  none;
+			
+			#sp & {
+				background-size: 310px auto;
+			}
+		}
+		
+		
+		div.slider {
+			width:           439px;
+			margin:          38px 0 50px 50px;
+			position:        relative;
+			
+			#sp & {
+				width:           245px;
+				margin:          25px 0 0 50px;
+			}
+			
+			&::before {
+				content:         "";
+				width:           538px;
+				height:          67px;
+				background-repeat: no-repeat;
+				@include position($top: 0, $left: -51px);
+				
+				#sp & {
+					background-size:   310px auto;
+					background-repeat: no-repeat;
+					width:           310px;
+				}
+			}
+			
+			div.ui-slider-range {
+				display:         none;
+			}
+			
+			a.ui-slider-handle {
+				border:          none;
+				background:      none;
+				width:           95px;
+				height:          70px;
+				overflow:        hidden;
+				margin-left:     -(95/2)-1+px;
+				cursor:          pointer;
+				background-size: 95px auto;
+				top:             -3px;
+				border:          1px solid #fff;
+				box-shadow:0px 0px 6px -2px #000000;
+				-moz-box-shadow:0px 0px 6px -2px #000000;
+				-webkit-box-shadow:0px 0px 6px -2px #000000;
+				-webkit-border-radius: 0 !important;
+				   -moz-border-radius: 0 !important;
+				        border-radius: 0 !important;
+				
+				#sp & {
+					margin-left:     -(95/2)-2.5+px;
+					@include scale(0.65, 0.65, 0.65, left top);
+				}
+			}
+		}
+		
+		&#rapid01 div.slider::before { background-image: url( "../img/rapid/gauge01.jpg" ); }
+		&#rapid02 div.slider::before { background-image: url( "../img/rapid/gauge02.jpg" ); }
+		&#rapid03 div.slider::before { background-image: url( "../img/rapid/gauge03.jpg" ); }
+		&#rapid04 div.slider::before { background-image: url( "../img/rapid/gauge04.jpg" ); }
+		&#rapid05 div.slider::before { background-image: url( "../img/rapid/gauge05.jpg" ); }
+		
+		
+		&#rapid05 {
+			div.slider {
+				width:           480px;
+				margin-left:     25px;
+				
+				#sp & {
+					width:           274px;
+				}
+				
+				&::before {
+					left:            -29px;
+				}
+			}
+			
+			a.ui-slider-handle {
+				width:           53px;
+				overflow:        hidden;
+				margin-left:     -(53/2)+px !important;
+				
+				#sp & {
+					margin-left:     -(53/2)-1px !important;
+				}
+			}
+		}
+	}
+	
+	p {
+		&::before {
+			content:         url( "../img/rapid/icon_arrow.png" );
+			margin-left:     -((58/2)+5)+px;
+			@include position($top: -30px, $left: 50%);
+			
+			#sp & {
+				zoom:            60%;
+			}
+		}
+	}
+}
+
+
+
+/** focus content
+/**************************************/
+div.focus_contents {
+	
+	#sp & {
+		width:           310px;
+		margin:          0 auto;
+	}
+	
+	div.content {
+		position:        relative;
+		width:           536px;
+		height:          402px;
+		
+		#sp & {
+			width:           100%;
+			height:          auto;
+		}
+		
+		img {
+			opacity:         0;
+			@include position($top: 0, $left: 0);
+			/*-webkit-transition:0.5s ease-out;
+	       -moz-transition:0.5s ease-out;
+	         -o-transition:0.5s ease-out;
+	            transition:0.5s ease-out;*/
+			
+			&.active {
+				opacity:         1;
+			}
+		}
+	}
+	
+	div.btn {
+		text-align:      center;
+		margin-top:      19px;
+		
+		#sp & {
+			@extend %cl;
+			
+			> div {
+				display:         block;
+				float:           left;
+				
+				&:last-child {
+					margin-right:    0 !important;
+				}
+				
+				a {
+					width:           100%;
+					height:          auto;
+					padding:         0;
+					font-size:       14px;
+					line-height:     45px;
+				}
+			}
+		}
+		
+		&#line2 {
+			#sp & {
+				> div {
+					width:           45%;
+					margin-right:    5%;
+					
+					&:last-child {
+						float:           right;
+					}
+				}
+			}
+		}
+		
+		&#line3 {
+			#sp & {
+				> div {
+					width:           30%;
+					margin-right:    5%;
+				}
+			}
+		}
+		
+		> div {
+			display:         inline-block;
+			
+			&.active {
+				a {
+					border:          1px solid #fff;
+				}
+			}
+			
+			a {
+				display:         inline-block;
+				width:           138px;
+				height:          52px;
+				line-height:     52px;
+				font-size:       20px;
+				color:           #fff;
+				border:          1px solid #4d4d4d;
+				position:        relative;
+				
+				&::before {
+					content:         "";
+					vertical-align:  middle;
+					width:           15px;
+					height:          15px;
+					margin-top:      -(15/2)+px;
+					border-top:      1px solid #fff;
+					border-right:    1px solid #fff;
+					@include position($top: 50%);
+					
+					#sp & {
+						zoom:            80%;
+					}
+				}
+				
+				&.btn_1::before {
+					-webkit-transform: rotate(-135deg);
+					transform: rotate(-135deg);
+					left:            13px;
+				}
+				
+				&.btn_3::before {
+					display:         none;
+				}
+				
+				&.btn_2::before {
+					-webkit-transform: rotate(45deg);
+					transform: rotate(45deg);
+					right:           13px;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+/** modal about
+/**************************************/
+div#modal_about {
+	text-align:      center;
+	padding:         60px 0;
+	color:           #fff;
+	@include tx-min;
+	
+	&.about_focus {
+		div.about_main {
+			@include wc(710px);
+			
+			#sp & {
+				width:           100%;
+				width:           (536/640)*100%;
+			}
+		}
+	}
+	
+	&.about_rapid {
+		div.about_main {
+			@include wc(880px);
+			
+			#sp & {
+				width:           (536/640)*100%;
+			}
+		}
+	}
+	
+	h2 {
+		font-size:       34px;
+		font-weight:     normal;
+		margin-bottom:   40px;
+		
+		#sp & {
+			font-size:       20px;
+			margin-bottom:   20px;
+			line-height:     1.2;
+		}
+	}
+	
+	p.tx {
+		font-size:       15px;
+		line-height:     2;
+		margin-bottom:   30px;
+		
+		#sp & {
+			font-size:       12px;
+			text-align:      left;
+			line-height:     1.8;
+			
+			br {
+				display:         none;
+			}
+		}
+	}
+	
+	div.box_focus {
+		@extend %cl;
+		
+		> div {
+			&:nth-of-type(odd) {
+				float:           left;
+			}
+			
+			&:nth-of-type(even) {
+				float:           right;
+			}
+			
+			#sp & {
+				width:           48%;
+			}
+		}
+		
+		h3 {
+			font-size:       14px;
+			margin-bottom:   15px;
+			
+			#sp & {
+				font-size:       12px;
+				margin-bottom:   10px;
+			}
+			
+			span {
+				font-size:       26px;
+				color:           #ca164d;
+				margin-right:    10px;
+				
+				#sp & {
+					font-size:       20px;
+					margin-right:    5px;
+				}
+			}
+		}
+		
+		p {
+			color:           #ca164d;
+			font-size:       16px;
+			margin-top:      10px;
+			
+			#sp & {
+				font-size:       12px;
+				margin-top:      5px;
+				line-height:     1.2;
+			}
+		}
+	}
+	
+	div.box_rapid {
+		width:           100%;
+		position:        relative;
+		margin-top:      50px;
+		@extend %cl;
+		
+		#sp & {
+			margin-top:      25px;
+		}
+		
+		img {
+			float:           right;
+			
+			#sp & {
+				width:           (430/536)*100%;
+			}
+		}
+		
+		p {
+			font-size:       20px;
+			line-height:     1.5;
+			@include position($left: 20px);
+			
+			#sp & {
+				font-size:       14px;
+				left:            0;
+			}
+			
+			span {
+				font-size:       14px;
+				display:         block;
+				
+				#sp & {
+					font-size:       12px;
+				}
+			}
+			
+			&.tx01 {
+				color:           #ca164d;
+				top:             57px;
+				
+				#sp & {
+					top:             9%;
+				
+					@media screen and (max-width:320px) {
+						zoom:            90%;
+					}
+				}
+			}
+			
+			&.tx02 {
+				top:             172px;
+				
+				#sp & {
+					top:             32%;
+				
+					@media screen and (max-width:320px) {
+						zoom:            90%;
+					}
+				}
+			}
+		}
+	}
+	
+	div.yb {
+		margin-top:      60px;
+		
+		h4 {
+			font-size:       24px;
+			margin-bottom:   30px;
+			
+			#sp & {
+				font-size:       19px;
+				
+				@media screen and (max-width:320px) {
+					font-size:       17px;
+				}
+			}
+		}
+		
+		#sp & {
+			margin-top:      40px;
+			
+			> div {
+				position:        relative;
+				position: relative;
+				padding-top: 56.25%;
+			}
+			
+			iframe {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 100% !important;
+			height: 100% !important;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
